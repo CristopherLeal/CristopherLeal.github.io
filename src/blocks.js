@@ -1,8 +1,10 @@
 import loadGrid from './blocks/grid';
+import loadText from './blocks/text';
 
 export default (editor, config = {}) => {
 
   loadGrid(editor,config);
+  loadText(editor,config);
 
   const bm = editor.BlockManager;
 
@@ -41,7 +43,7 @@ export default (editor, config = {}) => {
     attributes: {class:'fa fa-image'},
     content:{
       type: 'image',
-      style: {width: '50px'},
+      style: {width: '100%'},
       activeOnRender: 1
     }
   });
@@ -53,6 +55,18 @@ export default (editor, config = {}) => {
     content:{
       type: 'button',
       content: 'Botao',
+      activeOnRender: 1
+    }
+  });
+
+  bm.add('icon',{
+    label: 'Icon',
+    category: 'Custom',
+    attributes: {class:'fa fa-image'},
+    content:{
+      type: 'icon',
+      classes:['fa', 'fa-home'],
+        style: {padding: '20px' },
       activeOnRender: 1
     }
   });

@@ -1,11 +1,12 @@
 import loadText from './components/text';
 import loadGrid from './components/grid';
+import loadIcon from './components/icon';
 
 export default (editor, config = {}) => {
 
   loadText(editor, config);
   loadGrid(editor, config);
-
+  loadIcon(editor, config);
 
   const domc = editor.DomComponents;
 
