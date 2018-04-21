@@ -1,13 +1,17 @@
 import loadText from './components/text';
 import loadGrid from './components/grid';
 import loadIcon from './components/icon';
+import loadList from './components/list';
+import loadContainer from './components/container';
 
 export default (editor, config = {}) => {
 
   loadText(editor, config);
   loadGrid(editor, config);
   loadIcon(editor, config);
-
+  loadList(editor, config);
+  loadContainer(editor, config);
+  
   const domc = editor.DomComponents;
 
   const defaultType  = domc.getType('default');

@@ -1,41 +1,87 @@
 import loadGrid from './blocks/grid';
 import loadText from './blocks/text';
+import loadContainer from './blocks/container';
+import loadDisplay from './blocks/display';
+import loadList from './blocks/list';
+import loadFix from './blocks/fix';
 
 export default (editor, config = {}) => {
 
   loadGrid(editor,config);
   loadText(editor,config);
+  loadList(editor,config);
+  loadContainer(editor,config);
+  loadDisplay(editor,config);
+  loadFix(editor,config);
 
   const bm = editor.BlockManager;
 
 
-
-  bm.add('card',{
-    label: 'Card',
-    category: 'Custom',
-    attributes: {class:'gjs-fonts gjs-f-text'},
+  bm.add('layout-row-cell',{
+    label: 'Row',
+    category: 'Layout cell',
+    attributes: {class:'fa fa-th-large'},
     content:{
-      type: 'default',
-      classes:['w3-card'],
+      type: 'container',
+      classes:['w3-cell-row'],
       content:'',
-      style: {padding: '20px' },
+      style: {padding:'20px'},
+      activeOnRender: 1
+    }
+  });
+
+  bm.add('layout-cell',{
+    label: 'Cell',
+    category: 'Layout cell',
+    attributes: {class:'fa fa-th-large'},
+    content:{
+      type: 'container',
+      content:'',
+      classes:['w3-cell'],
+      style: {padding:'20px'},
+      activeOnRender: 1
+    }
+  });
+  bm.add('layout-middle-cell',{
+    label: 'Middle Cell',
+    category: 'Layout cell',
+    attributes: {class:'fa fa-th-large'},
+    content:{
+      type: 'container',
+      content:'',
+      classes:['w3-cell','w3-cell-middle'],
+      style: {padding:'20px'},
+      activeOnRender: 1
+    }
+  });
+
+  bm.add('layout-bottom-cell',{
+    label: 'Bottom Cell',
+    category: 'Layout cell',
+    attributes: {class:'fa fa-th-large'},
+    content:{
+      type: 'container',
+      content:'',
+      classes:['w3-cell','w3-cell-bottom'],
+      style: {padding:'20px'},
+      activeOnRender: 1
+    }
+  });
+
+  bm.add('layout-top-cell',{
+    label: 'Top Cell',
+    category: 'Layout cell',
+    attributes: {class:'fa fa-th-large'},
+    content:{
+      type: 'container',
+      content:'',
+      classes:['w3-cell','w3-cell-top'],
+      style: {padding:'20px'},
       activeOnRender: 1
     }
   });
 
 
-  bm.add('container',{
-    label: 'Container',
-    category: 'Custom',
-    attributes: {class:'gjs-fonts gjs-f-text'},
-    content:{
-      type: 'default',
-      classes:['w3-container'],
-      content:'',
-      style: {padding: '20px' },
-      activeOnRender: 1
-    }
-  });
 
   bm.add('image',{
     label: 'Image',
@@ -54,6 +100,7 @@ export default (editor, config = {}) => {
     attributes: {class:'fa fa-image'},
     content:{
       type: 'button',
+      classes: ['w3-button'],
       content: 'Botao',
       activeOnRender: 1
     }
@@ -65,11 +112,25 @@ export default (editor, config = {}) => {
     attributes: {class:'fa fa-image'},
     content:{
       type: 'icon',
-      classes:['fa', 'fa-home'],
-        style: {padding: '20px' },
+      style: {padding: '20px' },
       activeOnRender: 1
     }
   });
+
+
+
+
+  bm.add('video',{
+    label: 'Video',
+    category: 'Custom',
+    attributes: {class:'fa fa-home'},
+    content:{
+      type: 'video',
+      activeOnRender: 1
+    }
+  });
+
+
 
 
 
