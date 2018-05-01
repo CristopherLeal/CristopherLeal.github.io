@@ -11,7 +11,7 @@ export default (editor, config = {}) => {
   loadIcon(editor, config);
   loadList(editor, config);
   loadContainer(editor, config);
-  
+
   const domc = editor.DomComponents;
 
   const defaultType  = domc.getType('default');
@@ -45,4 +45,28 @@ export default (editor, config = {}) => {
     view: defaultView
   });
 
+  domc.addType('fullscreen-image', {
+    model: defaultModel.extend({
+      defaults: Object.assign({}, defaultModel.prototype.defaults, {
+        tagName: 'div',
+        draggable: true,
+        droppable: true,
+        editable:true,
+         traits: [{
+             type:'text',
+             label: 'link',
+             name: 'background'
+         }]
+      }),
+    },
+   {
+      isComponent: function(el) {
+        if(el.tagName == 'BUTTON'){
+          return {type: 'w3-button'};
+        }
+      },
+    }),
+    // Define the View
+    view: defaultView
+  });
 }

@@ -203,6 +203,30 @@ export default (editor, config = {}) => {
     }
   });
 
+  bm.add('fullscreen-image',{
+    label: 'Full screem image',
+    category: 'Image',
+    attributes: {class:'fa fa-image'},
+    content:{
+      type: 'default',
+      classes:['fullscreen-image'],
+      activeOnRender: 1
+    }
+  });
+
+  bm.add('parallax-image',{
+    label: 'Parallax image',
+    category: 'Image',
+    attributes: {class:'fa fa-image'},
+    content:{
+      type: 'default',
+      classes:['parallax'],
+      activeOnRender: 1
+    }
+  });
+
+
+
 
 
 

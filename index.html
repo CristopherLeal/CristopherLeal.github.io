@@ -42,6 +42,19 @@
         }
       });
 
+      var styleManager = editor.StyleManager;
+      var sector = styleManager.addSector('sector-background-image',{
+          name: 'Background Image',
+          open: true,
+          properties: [
+                          { name: 'Source',
+                            property:'background-image',
+                            type:'file',
+                            functionName:'url',
+                          }
+                      ]
+      });
+
       var assetManager = editor.AssetManager;
       assetManager.add('https://www.w3schools.com/w3images/team2.jpg');
       assetManager.add('https://www.w3schools.com/w3images/team1.jpg');
