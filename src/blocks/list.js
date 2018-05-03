@@ -5,7 +5,7 @@ export default (editor, config = {}) => {
   bm.add('list',{
     label: 'List',
     category: 'List',
-    attributes: {class:'fa fa-list'}, 
+    attributes: {class:'fa fa-list'},
     content:{
       type: 'list',
       classes:['w3-ul','w3-border','w3-padding-16'],

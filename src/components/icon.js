@@ -14,26 +14,19 @@ export default (editor, config = {}) => {
           draggable: true,
           droppable: false,
           editable:true,
+
+        /*  traits:[{type:'content'}],*/
+
           traits: [{
               type:'select',
-              label: 'fa icon',
-              name:'class',
+              label: 'Icon',
+              name:'content',
+              default:'home',
+              changeProp:1,
               options: [
-                {value:'fa fa-home', name:'home'},
-                {value:'fa fa-search', name:'search'},
-                {value:'fa fa-android',name:''},
-                {value:'fa fa-apple',name:''},
-                {value:'fa fa-bitcoin',name:''},
-                {value:'fa fa-bluetooth',name:''},
-                {value:'fa fa-cc-visa',name:''},
-                {value:'fa fa-cc-paypal',name:''},
-                {value:'fa fa-chrome',name:''},
-                {value:'fa fa-dropbox',name:''},
-                {value:'fa fa-edge',name:''},
-                {value:'fa fa-facebook'},
-                {value:'fa fa-facebook-official'},
-                {value:'fa fa-facebook-square'},
-
+                {value:'home', name:'home'},
+                {value:'search', name:'search'},
+                {value:'android',name:'android'},
               ]
           }]
         }),
@@ -45,6 +38,12 @@ export default (editor, config = {}) => {
         }
       },
     }),
-    view: defaultView
+    view: defaultView.extend({
+      initialize(o){
+        defaultView.prototype.initialize.apply(this,arguments);
+        const model = this.model;
+        this.listenTo(model,'change:content',this.updateContent);
+      }
+    })
   });
 }

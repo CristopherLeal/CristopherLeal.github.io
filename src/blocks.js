@@ -174,7 +174,9 @@ export default (editor, config = {}) => {
     attributes: {class:'fa fa-image'},
     content:{
       type: 'icon',
-      style: {padding: '20px' },
+      classes:['material-icons'],
+      content:'home',
+      style:{padding:'0px'},
       activeOnRender: 1
     }
   });
@@ -224,6 +226,18 @@ export default (editor, config = {}) => {
       activeOnRender: 1
     }
   });
+
+  bm.add('teste',{
+    label: 'Teste',
+    category: 'Templates',
+    attributes: {class:'fa fa-home'},
+    content:{
+      type: 'container',
+      activeOnRender: 1
+    }
+  });
+
+
 
 
 
