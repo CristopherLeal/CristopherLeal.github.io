@@ -1,3 +1,5 @@
+import icons from '../traits/icons-array';
+
 export default (editor, config = {}) => {
 
   const domc = editor.DomComponents;
@@ -5,6 +7,7 @@ export default (editor, config = {}) => {
   const defaultType  = domc.getType('default');
   const defaultModel = defaultType.model;
   const defaultView  = defaultType.view;
+  var iconlist = icons();
 
   domc.addType('icon', {
 
@@ -15,19 +18,13 @@ export default (editor, config = {}) => {
           droppable: false,
           editable:true,
 
-        /*  traits:[{type:'content'}],*/
-
           traits: [{
               type:'select',
               label: 'Icon',
               name:'content',
               default:'home',
               changeProp:1,
-              options: [
-                {value:'home', name:'home'},
-                {value:'search', name:'search'},
-                {value:'android',name:'android'},
-              ]
+              options: iconlist,
           }]
         }),
       },
@@ -38,6 +35,8 @@ export default (editor, config = {}) => {
         }
       },
     }),
+
+    //Change defaultView to listen change:content events
     view: defaultView.extend({
       initialize(o){
         defaultView.prototype.initialize.apply(this,arguments);

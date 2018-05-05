@@ -147,7 +147,7 @@ export default (editor, config = {}) => {
 
   bm.add('image',{
     label: 'Image',
-    category: 'Custom',
+    category: 'Image',
     attributes: {class:'fa fa-image'},
     content:{
       type: 'image',
@@ -170,7 +170,7 @@ export default (editor, config = {}) => {
 
   bm.add('icon',{
     label: 'Icon',
-    category: 'Custom',
+    category: 'Image',
     attributes: {class:'fa fa-image'},
     content:{
       type: 'icon',
@@ -186,7 +186,7 @@ export default (editor, config = {}) => {
 
   bm.add('video',{
     label: 'Video',
-    category: 'Custom',
+    category: 'Video',
     attributes: {class:'fa fa-home'},
     content:{
       type: 'video',
@@ -196,7 +196,7 @@ export default (editor, config = {}) => {
 
   bm.add('video-container',{
     label: 'Video Container',
-    category: 'Custom',
+    category: 'Video',
     attributes: {class:'fa fa-home'},
     content:{
       type: 'default',
