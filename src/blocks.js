@@ -184,10 +184,10 @@ export default (editor, config = {}) => {
 
 
 
-  bm.add('video',{
-    label: 'Video',
+  bm.add('streamming',{
+    label: 'Streamming',
     category: 'Video',
-    attributes: {class:'fa fa-home'},
+    attributes: {class:'fa fa-youtube-play'},
     content:{
       type: 'streamming',
       classes:['video-container'],
@@ -195,13 +195,13 @@ export default (editor, config = {}) => {
     }
   });
 
-  bm.add('video-container',{
-    label: 'Video Container',
+  bm.add('video',{
+    label: 'Video',
     category: 'Video',
-    attributes: {class:'fa fa-home'},
+    attributes: {class:'fa fa-file-movie-o'},
     content:{
-      type: 'default',
-      classes:['video-container'],
+      type: 'video',
+      attributes:{src:'https://www.w3schools.com/howto/rain.mp4'},
       activeOnRender: 1
     }
   });
