@@ -189,7 +189,8 @@ export default (editor, config = {}) => {
     category: 'Video',
     attributes: {class:'fa fa-home'},
     content:{
-      type: 'video',
+      type: 'streamming',
+      classes:['video-container'],
       activeOnRender: 1
     }
   });
@@ -236,13 +237,6 @@ export default (editor, config = {}) => {
       activeOnRender: 1
     }
   });
-
-
-
-
-
-
-
 
 
 }

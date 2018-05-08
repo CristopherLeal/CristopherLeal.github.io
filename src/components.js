@@ -4,6 +4,7 @@ import loadIcon from './components/icon';
 import loadList from './components/list';
 import loadContainer from './components/container';
 import loadAccordion from './components/accordion';
+import loadStreamming from './components/streamming';
 
 export default (editor, config = {}) => {
 
@@ -13,6 +14,7 @@ export default (editor, config = {}) => {
   loadList(editor, config);
   loadContainer(editor, config);
   loadAccordion(editor, config);
+  loadStreamming(editor, config);
 
   const domc = editor.DomComponents;
 
