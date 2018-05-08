@@ -227,12 +227,12 @@ export default (editor, config = {}) => {
     }
   });
 
-  bm.add('teste',{
-    label: 'Teste',
-    category: 'Templates',
+  bm.add('accordion',{
+    label: 'Accordion',
+    category: 'Accordion',
     attributes: {class:'fa fa-home'},
     content:{
-      type: 'container',
+      type: 'accordion',
       activeOnRender: 1
     }
   });

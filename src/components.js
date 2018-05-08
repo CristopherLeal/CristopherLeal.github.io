@@ -3,6 +3,7 @@ import loadGrid from './components/grid';
 import loadIcon from './components/icon';
 import loadList from './components/list';
 import loadContainer from './components/container';
+import loadAccordion from './components/accordion';
 
 export default (editor, config = {}) => {
 
@@ -11,6 +12,7 @@ export default (editor, config = {}) => {
   loadIcon(editor, config);
   loadList(editor, config);
   loadContainer(editor, config);
+  loadAccordion(editor, config);
 
   const domc = editor.DomComponents;
 
