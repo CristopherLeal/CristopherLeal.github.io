@@ -1,6 +1,7 @@
 export default (editor, config = {}) => {
 
   const bm = editor.BlockManager;
+  const default_padding = '3px';
 
 
   bm.add('container-display',{
@@ -9,7 +10,8 @@ export default (editor, config = {}) => {
     attributes: {class:'fa fa-plus-square-o'},
     content:{
       type: 'container',
-      classes:['w3-display-container','w3-padding-16'],
+      classes:['w3-display-container'],
+      style:{padding:default_padding},
       activeOnRender: 1
     }
   });
@@ -21,7 +23,7 @@ export default (editor, config = {}) => {
     content:{
       type: 'container',
       classes:['w3-display-middle'],
-      style:{padding:'20px'},
+      style:{padding:default_padding},
       activeOnRender: 1
     }
   });
@@ -33,7 +35,7 @@ export default (editor, config = {}) => {
     content:{
       type: 'container',
       classes:['w3-display-topright'],
-      style:{padding:'20px'},
+      style:{padding:default_padding},
       activeOnRender: 1
     }
   });
@@ -45,7 +47,7 @@ export default (editor, config = {}) => {
     content:{
       type: 'container',
       classes:['w3-display-topleft'],
-      style:{padding:'20px'},
+      style:{padding:default_padding},
       activeOnRender: 1
     }
   });
@@ -57,7 +59,7 @@ export default (editor, config = {}) => {
     content:{
       type: 'container',
       classes:['w3-display-bottomright'],
-      style:{padding:'20px'},
+      style:{padding:default_padding},
       activeOnRender: 1
     }
   });
@@ -69,7 +71,7 @@ export default (editor, config = {}) => {
     content:{
       type: 'container',
       classes:['w3-display-bottomleft'],
-      style:{padding:'20px'},
+      style:{padding:default_padding},
       activeOnRender: 1
     }
   });
@@ -81,7 +83,7 @@ export default (editor, config = {}) => {
     content:{
       type: 'container',
       classes:['w3-display-right'],
-      style:{padding:'20px'},
+      style:{padding:default_padding},
       activeOnRender: 1
     }
   });
@@ -93,7 +95,7 @@ export default (editor, config = {}) => {
     content:{
       type: 'container',
       classes:['w3-display-left'],
-      style:{padding:'20px'},
+      style:{padding:default_padding},
       activeOnRender: 1
     }
   });
@@ -105,7 +107,7 @@ export default (editor, config = {}) => {
     content:{
       type: 'container',
       classes:['w3-display-topmiddle'],
-      style:{padding:'20px'},
+      style:{padding:default_padding},
       activeOnRender: 1
     }
   });
@@ -117,7 +119,7 @@ export default (editor, config = {}) => {
     content:{
       type: 'container',
       classes:['w3-display-bottommiddle'],
-      style:{padding:'20px'},
+      style:{padding:default_padding},
       activeOnRender: 1
     }
   });

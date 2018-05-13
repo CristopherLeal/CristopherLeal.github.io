@@ -1,6 +1,7 @@
 export default (editor, config = {}) => {
 
   const bm = editor.BlockManager;
+  const default_padding = '3px';
 
   bm.add('row',{
     label: 'Row',
@@ -10,7 +11,7 @@ export default (editor, config = {}) => {
       type: 'row',
       classes:['w3-row'],
       content:'',
-      style: {padding: '20px' },
+      style: {padding: default_padding },
       activeOnRender: 1
     }
   });
@@ -22,7 +23,7 @@ export default (editor, config = {}) => {
     content:{
       type: 'column',
       classes:['w3-half'],
-      style: {padding: '20px' },
+      style: {padding: default_padding },
       activeOnRender: 1
     }
   });
@@ -35,7 +36,7 @@ export default (editor, config = {}) => {
       type: 'column',
       classes:['w3-third'],
       content:'',
-      style: {padding: '20px' },
+      style: {padding: default_padding },
       activeOnRender: 1
     }
   });
@@ -48,7 +49,7 @@ export default (editor, config = {}) => {
       type: 'column',
       classes:['w3-twothird'],
       content:'',
-      style: {padding: '20px' },
+      style: {padding: default_padding },
       activeOnRender: 1
     }
   });
@@ -61,7 +62,7 @@ export default (editor, config = {}) => {
       type: 'column',
       classes:['w3-quarter'],
       content:'',
-      style: {padding: '20px' },
+      style: {padding: default_padding },
       activeOnRender: 1
     }
   });
@@ -74,7 +75,7 @@ export default (editor, config = {}) => {
       type: 'column',
       classes:['w3-threequarter'],
       content:'',
-      style: {padding: '20px' },
+      style: {padding: default_padding },
       activeOnRender: 1
     }
   });
@@ -87,7 +88,7 @@ export default (editor, config = {}) => {
       type: 'column',
       classes:['w3-rest'],
       content:'',
-      style: {padding: '20px' },
+      style: {padding: default_padding },
       activeOnRender: 1
     }
   });

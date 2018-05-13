@@ -54,17 +54,6 @@ export default (editor, config = {}) => {
         if (!comps.length) {
           comps.reset();
           comps.add(`
-            <style>
-              .accordion-button{
-                padding:10px;
-                margin:0px;
-                background-color:#000000;
-                color:#ffffff;
-              }
-              .accordion-button:hover{
-                background-color:#888888;
-              }
-            </style>
             <div data-js="accordion-button" class="accordion-button w3-panel w3-block w3-left-align">
                 Open Section 1
             </div>

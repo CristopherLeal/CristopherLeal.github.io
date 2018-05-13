@@ -1,6 +1,7 @@
 export default (editor, config = {}) => {
 
   const bm = editor.BlockManager;
+  const default_padding = '0px';
 
   bm.add('fix-top',{
     label: 'fix top',
@@ -10,7 +11,7 @@ export default (editor, config = {}) => {
       type: 'default',
       classes:['w3-top'],
       content:'',
-      style: {padding: '20px' },
+      style: {padding: default_padding },
       activeOnRender: 1
     }
   });
@@ -22,7 +23,7 @@ export default (editor, config = {}) => {
       type: 'default',
       classes:['w3-right'],
       content:'',
-      style: {padding: '20px' },
+      style: {padding: default_padding },
       activeOnRender: 1
     }
   });
@@ -35,7 +36,7 @@ export default (editor, config = {}) => {
       type: 'default',
       classes:['w3-left'],
       content:'',
-      style: {padding: '20px' },
+      style: {padding: default_padding },
       activeOnRender: 1
     }
   });
@@ -48,7 +49,7 @@ export default (editor, config = {}) => {
       type: 'default',
       classes:['w3-bottom'],
       content:'',
-      style: {padding: '20px' },
+      style: {padding: default_padding },
       activeOnRender: 1
     }
   });

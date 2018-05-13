@@ -1,6 +1,7 @@
 export default (editor, config = {}) => {
 
   const bm = editor.BlockManager;
+  const default_padding = '3px';
 
   bm.add('container',{
     label: 'Container',
@@ -10,7 +11,7 @@ export default (editor, config = {}) => {
       type: 'container',
       classes:['w3-container'],
       content:'',
-      style: {padding: '20px' },
+      style: {padding: default_padding },
       activeOnRender: 1
     }
   });
@@ -21,7 +22,8 @@ export default (editor, config = {}) => {
     attributes: {class:'fa fa-plus-square-o'},
     content:{
       type: 'container',
-      classes:['w3-card','w3-padding-16'],
+      classes:['w3-card'],
+      style: {padding: default_padding },
       content:'',
       activeOnRender: 1
     }
@@ -33,7 +35,8 @@ export default (editor, config = {}) => {
     attributes: {class:'fa fa-plus-square-o'},
     content:{
       type: 'container',
-      classes:['w3-hover-shadow','w3-padding-16'],
+      classes:['w3-hover-shadow'],
+      style: {padding: default_padding },
       activeOnRender: 1
     }
   });

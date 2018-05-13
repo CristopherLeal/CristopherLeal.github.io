@@ -55,7 +55,7 @@ export default (editor, config = {}) => {
     attributes: {class:'fa fa-link'},
     content:{
       type: 'container',
-      classes:['w3-bar','w3-black'],
+      classes:['w3-bar'],
       activeOnRender: 1
     }
   });
