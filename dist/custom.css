@@ -20,6 +20,7 @@ show on canvas */
 .w3-hover-shadow,
 .w3-panel,
 .w3-bar,
+.w3-bar-block,
 .w3-display-container{
 	min-height: 30px;
 }
@@ -43,9 +44,18 @@ show on canvas */
 }
 .w3-left,
 .w3-right{
-	min-height: 50px;
+	min-height: 30px;
 	min-width: 50px;
 }
+
+
+i,
+span {
+vertical-align: middle;
+}
+
+
+
 
 .accordion-button{
 	padding:10px;

@@ -44,7 +44,7 @@ export default (editor, config = {}) => {
   bm.add('accordion',{
     label: 'Accordion',
     category: 'Accordion',
-    attributes: {class:'fa fa-home'},
+    attributes: {class:'fa fa-align-justify'},
     content:{
       type: 'accordion',
       activeOnRender: 1

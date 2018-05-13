@@ -21,7 +21,8 @@ export default (editor, config = {}) => {
              el.tagName == 'H2' ||
              el.tagName == 'H3' ||
              el.tagName == 'H4' ||
-             el.tagName == 'H5'
+             el.tagName == 'H5' ||
+             el.tagName == 'SPAN'
           )
         {
           return {type: 'text'};

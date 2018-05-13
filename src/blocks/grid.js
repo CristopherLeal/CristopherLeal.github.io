@@ -19,7 +19,7 @@ export default (editor, config = {}) => {
   bm.add('half-col',{
     label: '1/2 column',
     category: 'Grid',
-    attributes: {class:'fa fa-columns'},
+    attributes: {class:'fa fa-pause'},
     content:{
       type: 'column',
       classes:['w3-half'],
