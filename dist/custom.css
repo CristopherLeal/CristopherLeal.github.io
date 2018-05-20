@@ -54,7 +54,11 @@ span {
 vertical-align: middle;
 }
 
-
+form{
+	min-height: 30px;
+	margin:0px;
+	padding: 3px;
+}
 
 
 .accordion-button{
